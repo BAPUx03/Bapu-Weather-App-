@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="assets/weather-icon.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather Finder</h1>
+            <div class="theme-toggle">
+                <input type="checkbox" id="dark-mode-toggle">
+                <label for="dark-mode-toggle" class="theme-toggle-label">
+                    <span class="theme-toggle-moon">🌙</span>
+                    <span class="theme-toggle-sun">☀️</span>
+                </label>
+            </div>
+        </header>
+
+        <main>
+            <section class="search-section">
+                <div class="search-container">
+                    <input type="text" id="city-search" placeholder="Enter city name">
+                    <button id="search-btn">Search</button>
+                    <button id="location-btn">
+                        <span class="material-icons">location_on</span>
+                        Use My Location
+                    </button>
+                </div>
+            </section>
+
+            <section class="weather-display" id="current-weather">
+                <div class="weather-info">
+                    <h2 id="city-name">-</h2>
+                    <div class="temperature-container">
+                        <img id="weather-icon" src="assets/default-weather-icon.png" alt="Weather Icon">
+                        <div class="temp-details">
+                            <p id="temperature">-</p>
+                            <p id="weather-description">-</p>
+                        </div>
+                    </div>
+                    <div class="additional-details">
+                        <div class="detail">
+                            <span class="material-icons">water_drop</span>
+                            <div>
+                                <p>Humidity</p>
+                                <p id="humidity">-</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <span class="material-icons">air</span>
+                            <div>
+                                <p>Wind Speed</p>
+                                <p id="wind-speed">-</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="forecast-section">
+                <h3>5-Day Forecast</h3>
+                <div id="forecast-container" class="forecast-grid">
+                    <!-- Forecast days will be dynamically populated -->
+                </div>
+            </section>
+
+            <section class="social-share">
+                <h3>Share Weather</h3>
+                <div class="share-buttons">
+                    <button id="twitter-share">Twitter</button>
+                    <button id="whatsapp-share">WhatsApp</button>
+                    <button id="facebook-share">Facebook</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2024 Weather Finder App</p>
+            <p>Powered by OpenWeatherMap</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
